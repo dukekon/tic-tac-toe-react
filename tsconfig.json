@@ -26,9 +26,6 @@
         "./src/*"
       ]
     },
-    "types": [
-      "@emotion/react/types/css-props"
-    ]
   },
   "include": [
     "src"
