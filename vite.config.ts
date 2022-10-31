@@ -8,13 +8,13 @@ export default defineConfig({
   plugins: [react({
     jsxImportSource: '@emotion/react',
     babel: {
-      plugins: ['@emotion/babel-plugin']
-    }
+      plugins: ['@emotion/babel-plugin'],
+    },
   })],
   esbuild: {
-    logOverride:{
-     'this-is-undefined-esm': 'silent',
-    }
+    logOverride: {
+      'this-is-undefined-in-esm': 'silent',
+    },
   },
   resolve: {
     alias: {
