@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
@@ -18,7 +19,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "noImplicitAny": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
@@ -26,9 +26,7 @@
         "./src/*"
       ]
     },
-    "types": [
-      "@emotion/react/types/css-props"
-    ]
+    "types": ["vite/client", "@emotion/react/types/css-prop"]
   },
   "include": [
     "src"

@@ -3,6 +3,11 @@
     --color-light: #f1f1f1;
 
     --border-size: 4px;
+
+    --border: var(--border-size) solid var(--color-dark);
+    --padding-bottom-board: 100%;
+    --padding-bottom--row: 33.33333333%;
+    --padding-bottom-checker: calc(var(--padding-bottom--row));
 }
 
 * {
