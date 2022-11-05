@@ -3,7 +3,7 @@ import '@/assets/style.css'
 import Chess from '@/components/chess'
 
 interface Props {
-  chess: number
+  chess: string
   onClick: () => void
 }
 

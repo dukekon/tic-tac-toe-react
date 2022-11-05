@@ -3,20 +3,21 @@ import '@/assets/style.css'
 import BoardGrid from '@/components/BoardGrid'
 
 interface Props {
-  chesses: number[][]
+  chesses: string[][]
   onClick: (x: number, y: number) => void
 }
 
-const Board = ({ chesses, onClick }: Props) => {
+const Board = (props: Props) => {
   const layout = Array(3).fill(null).map(item => Array(3).fill(null))
 
   const renderBoardGrids = () => {
-    return layout.map((rows, y) => (
+    console.log(props.chesses)
+    return props.chesses.map((rows, x) => (
       // render rows
-      <div className='board-row' key={ y }>
+      <div className='board-row' key={ x + 9 }>
         {/*render cols*/ }
-        { rows.map((cols, x) => (
-          <BoardGrid chess={ chesses[y][x] } key={ y + x } onClick={ () => onClick(x, y) }/>
+        { rows.map((cols, y) => (
+          <BoardGrid chess={ props.chesses[x][y] } key={ y + x } onClick={ () => props.onClick(x, y) }/>
         )) }
       </div>
     ))
