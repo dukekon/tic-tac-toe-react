@@ -3,12 +3,17 @@ import styled from 'styled-components'
 import Square from '@/components/game/Square'
 
 export default () => {
+
+  const renderSquares = (i: number) => {
+    return <Square value={ i } key={ i }/>
+  }
+
   return (
     <Board>
       <div className={ 'inner' }>
-        { Array(3).fill(0).map(item => (
-          <div className='board-row'>
-            { Array(3).fill(0).map(item => <Square/>) }
+        { [1, 2, 3].map((row, i) => (
+          <div className='board-row' key={ row }>
+            { [1, 2, 3].map(col => renderSquares(i * 3 + col)) }
           </div>
         )) }
       </div>
@@ -25,10 +30,10 @@ const Board = styled.div`
   box-shadow: var(--shadow-board);
 
   .inner {
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     flex-flow: column;
-    padding: 10px;
     width: 100%;
     height: 100%;
     border-radius: var(--radius-board-inner);

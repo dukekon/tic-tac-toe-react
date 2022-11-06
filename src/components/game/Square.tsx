@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export default () => {
+interface Props {
+  value: number
+}
+
+export default ({ value }: Props) => {
   return (
     <Square>
-      { 'abc' }
+      { value }
     </Square>
   )
 }
